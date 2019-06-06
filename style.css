@@ -1,0 +1,197 @@
+/* color.adobe.com -> extract from image to choose color */
+
+* {-webkit-font-smoothing: antialiased;}
+/* IMPORTANT THERE IS AN ISSUE WITH FONT-WEIGHT FOR BROWSER OR FONTS THAT DON"T SUPPORT. THIS ALLOWS IT TO WORK!  */
+
+body {
+    background: #fff;
+}
+
+/* html {
+    font-family: 'Open Sans', sans-serif;
+} */
+
+/* header is the element container that contains the logo or headings <h1-h6> */
+header {
+    background: #FAFAFA;
+    border-bottom: 1px solid #ccc;
+     /* border-bottom puts a line under the border */
+    position: fixed;
+    /* An element with position: fixed; is positioned relative to the viewport, which means it always stays in the same place even if the page is scrolled. The top, right, bottom, and left properties are used to position the element. */
+    top: 0;
+    /* If position: absolute; or position: fixed; - the top property sets the top edge of an element to a unit above/below the top edge of its nearest positioned ancestor. */
+    left: 0;
+    /* The left property affects the horizontal position of a positioned element. This property has no effect on non-positioned elements. */
+    width: 100%;
+    /* Use width to say the header container is 100 percent of the screen */
+    z-index: 20;
+    /* The z-index property specifies the stack order of an element. An element with greater stack order is always in front of an element with a lower stack order. Only works on positioned elements */
+}
+
+/* a is used to target each icon */
+a {
+    box-sizing: border-box;
+    /* The box-sizing property defines how the width and height of an element are calculated: should they include padding and borders, or not. */
+    /* Border Box- The width and height properties (and min/max properties) includes content, padding and border */
+    width: 25%;
+    /* Each anchor tag or icon is occupying 25% of the width on that line */
+    display: inline-block;
+    margin-left: -3px;
+    /* Moved the icons a little to the left which allowed them to stay on the same line. */
+    text-align: center;
+    padding: 12px;
+    /* Needed border-box to allow padding so the icon can stay on the same line  */
+}
+
+.fa-heart:hover{
+    color: red;
+}
+
+/* header icons.    Can go into a element */
+.fas, .far {
+    color: #111;
+    font-size: 25px;
+}
+
+.container{
+   background: #FAFAFA;
+   padding-top: 50px;
+    /* Since the heading was fixed we were losing 50 px since it was behind it. Now we have our 50px */ 
+   position: absolute;
+   width: 100%;
+   top: 50px;
+   bottom: 0;
+   font-family: 'Open Sans', sans-serif;
+ 
+}
+
+.card {
+    background: #FAFAFA;
+    margin: 0 auto;
+    /* margin centers card which is why there red is split into two */
+    width: 550px;
+    /* Div won't show if there's only a width. It also needs a height. Since I have a picture with a set height I don't need to assign it one */
+    /* height: 600px; */
+    border: 1px solid #ccc;
+    /* border draws a line around the class card */
+    border-radius: 3px;
+    /* Give a little curve on the edges */
+    /* The border-radius CSS property rounds the corners of an element's outer border edge. You can set a single radius to make circular corners, or two radii to make elliptical corners. */
+}
+
+.card-header {
+    padding: 15px;
+    /* padding so it wont touch the border */
+}
+
+.profile-img {
+    display: inline-block;
+    background: silver;
+    height: 30px;
+    width: 30px;
+    border-radius: 50%;
+    /* border-radius rounds the edges */
+    position: relative;
+    top: 5px;
+    margin-right: 5px;
+}
+
+.profile-info {
+    display: inline-block
+}
+
+.name {
+    font-size: 14;
+    color: #111;
+    font-weight: 700;
+    /* font-weight makes it bold */
+}
+
+.location {
+    font-size: 12px;
+    color: 111;
+}
+
+.time {
+    font-size: 10px;
+    float: right;
+    display: inline-block;  
+    position: relative;
+    top: 10px;
+    /* Need position to use top */
+}
+
+.content {
+
+}
+
+img {
+    width: 100%;
+    /* Don't need width b/c it already occupies 100 % */
+  
+}
+
+.card-footer {
+    position: relative;
+    left: 7px;
+}
+
+.likes {
+    color: #111;
+    font-size: 12px;
+    padding-bottom: 10px;
+}
+
+p {
+    font-size: 14px;
+    margin: 0;
+    padding: 0 0 5px 0;
+}
+
+span {
+    font-weight: 700;
+    /* makes it bold   */
+}
+
+form {
+    padding-top: 15px;
+    padding-bottom: 5px;
+}
+
+.heart {
+    width: 7%;
+    /* You can't see the width */
+    display: inline-block;
+    position: relative;
+    top: 5px;
+
+    /* This div class doesn't mess with the header Heart */
+}
+
+.add-comment {
+    width: 60%;
+    display: inline-block;
+    /* display inline-block puts it on the same line */
+}
+
+input {
+    width: 70%;
+    padding: 5px;
+    /* padding makes the placeholder bigger */
+    border: 0px solid #fff;
+}
+
+.options {
+    width: 7%;
+    display: inline-block;
+    float: right;
+    position: relative;
+    top: 3px;
+}
+
+hr {
+    position: relative;
+    right: 7.5px;
+    /* This fixed the line going outside the box. 
+    Remember you need position to use right */
+}
